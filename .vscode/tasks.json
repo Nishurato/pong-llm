@@ -1,0 +1,51 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "CMake: Configure Pong",
+            "command": "cmake",
+            "args": [
+                "-S",
+                "${workspaceFolder}",
+                "-B",
+                "${workspaceFolder}\\build"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "PATH": "${env:PATH};${env:ProgramFiles}\\CMake\\bin"
+                }
+            },
+            "problemMatcher": [],
+            "detail": "Configure the Pong CMake project."
+        },
+        {
+            "type": "shell",
+            "label": "CMake: Build Pong",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}\\build",
+                "--config",
+                "Debug"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "PATH": "${env:PATH};${env:ProgramFiles}\\CMake\\bin"
+                }
+            },
+            "dependsOn": "CMake: Configure Pong",
+            "dependsOrder": "sequence",
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Build the Pong CMake project."
+        }
+    ],
+    "version": "2.0.0"
+}

@@ -1,0 +1,23 @@
+# CMake build output
+/build/
+/cmake-build-*/
+CMakeUserPresets.json
+
+# Visual Studio
+.vs/
+*.sln
+*.slnx
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# Compiled output and debug symbols
+*.exe
+*.obj
+*.pdb
+*.ilk
+*.idb
+*.pch
+
+# Machine-specific VS Code settings
+/.vscode/settings.json
